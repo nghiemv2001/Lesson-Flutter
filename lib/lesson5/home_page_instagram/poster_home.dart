@@ -7,17 +7,18 @@ class Poster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                child: Row(
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 50,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              child: Row(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10, top: 11, bottom: 11),
+                    child: Container(
+                      height: 32,
+                      width: 32,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(40),
                         child: Image.asset(
@@ -26,51 +27,56 @@ class Poster extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Column(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                "joshua_l",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w700),
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(top: 6, left: 9),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              "joshua_l",
+                              style: TextStyle(
+                                  color: Color(0xFF262626),
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 3),
+                              child: Image.asset(
+                                'assets/images/Shape.jpg',
+                                width: 9,
+                                fit: BoxFit.fitWidth,
                               ),
-                              Container(
-                                margin: EdgeInsets.only(left: 5),
-                                height: 15,
-                                width: 15,
-                                child: Image.asset(
-                                  'assets/images/Shape.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                        Text('Tokyo, Jpan'),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      Text(
+                        'Tokyo, Jpan',
+                        style: TextStyle(
+                            fontSize: 11, fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Image.asset(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Image.asset(
                 "assets/images/image_points_icon.jpg",
                 fit: BoxFit.cover,
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
-        SizedBox(height: 15),
         Stack(
           alignment: Alignment.topRight,
           children: <Widget>[
             Container(
-              height: 300,
+              height: 375,
               width: double.infinity,
               color: Colors.orange,
               child: Image.asset(
@@ -96,28 +102,53 @@ class Poster extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(height: 10),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.only(
+              right: 15.4, top: 10, left: 14, bottom: 13.5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                width: 100,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Image.asset(
-                      "assets/images/image_like.jpg",
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset("assets/images/image_comment.jpg"),
-                    Image.asset("assets/images/image_messager_icon.jpg"),
-                  ],
+                width: 105,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 17.34),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/images/image_like.jpg",
+                        width: 24,
+                        fit: BoxFit.fitWidth,
+                      ),
+                      Image.asset(
+                        "assets/images/image_comment.jpg",
+                        width: 24,
+                        fit: BoxFit.fitWidth,
+                      ),
+                      Image.asset(
+                        "assets/images/image_messager_icon.jpg",
+                        width: 24,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Image.asset("assets/images/image_pagination.jpg"),
-              Image.asset("assets/images/image_save.jpg"),
+              Padding(
+                padding: const EdgeInsets.only(right: 70),
+                child: Container(
+                  child: Image.asset(
+                    "assets/images/image_pagination.jpg",
+                    width: 26,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+              ),
+              Image.asset(
+                "assets/images/image_save.jpg",
+                width: 24,
+                fit: BoxFit.fitWidth,
+              ),
             ],
           ),
         )

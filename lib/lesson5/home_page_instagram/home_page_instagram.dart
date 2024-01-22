@@ -16,19 +16,13 @@ class _HomePageInstagramState extends State<HomePageInstagram> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBarHome(),
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            AppBarHome(),
             ListCardItem(),
             Poster(),
-            SizedBox(
-              height: 10,
-            ),
             BottomPage(),
-            SizedBox(
-              height: 10,
-            ),
             BottomBar()
           ],
         ),
