@@ -27,23 +27,26 @@ class AppBarHome extends StatelessWidget implements PreferredSize {
         ),
       ),
       actions: [
-        Stack(alignment: Alignment.topRight, children: [
-          Image.asset(
-            'assets/images/image_shape_icon.jpg',
-            width: 24,
-            fit: BoxFit.fitWidth,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: Container(
-              height: 8,
-              width: 8,
-              decoration: BoxDecoration(
-                  color: Colors.redAccent,
-                  borderRadius: BorderRadius.circular(10)),
+        Container(
+          padding: EdgeInsets.only(top: 7),
+          child: Stack(alignment: Alignment.topRight, children: [
+            Image.asset(
+              'assets/images/image_shape_icon.jpg',
+              width: 24,
+              fit: BoxFit.fitWidth,
             ),
-          ),
-        ]),
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Container(
+                height: 8,
+                width: 8,
+                decoration: BoxDecoration(
+                    color: Colors.redAccent,
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+            ),
+          ]),
+        ),
         const SizedBox(
           width: 18,
         ),
