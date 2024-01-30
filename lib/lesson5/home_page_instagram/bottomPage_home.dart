@@ -11,6 +11,11 @@ class BottomPage extends StatelessWidget {
           padding: const EdgeInsets.only(left: 15.5),
           child: Row(
             children: <Widget>[
+              SizedBox(
+                child: Center(
+                  child: Text("HIII"),
+                ),
+              ),
               Image.asset(
                 "assets/images/image_oval.jpg",
                 width: 17,
