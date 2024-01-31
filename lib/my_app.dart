@@ -1,4 +1,4 @@
-import 'package:design_ui_instagram/lesson6/widgets/home_page/home_page.dart';
+import 'package:design_ui_instagram/lesson7/pages/direct_message/direct_message_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageLesson6(),
+      home: Direct_Message_Page(),
     );
   }
 }
