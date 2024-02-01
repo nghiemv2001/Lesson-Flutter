@@ -16,7 +16,11 @@ class BottomBarLoginPage extends StatelessWidget implements PreferredSize {
         children: [
           Text(
             "Instagram от Facebook",
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Color(0xFF000000).withOpacity(0.4),
+            ),
           ),
         ],
       ),

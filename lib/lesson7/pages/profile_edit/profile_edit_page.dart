@@ -21,7 +21,6 @@ class ProfileEditPage extends StatelessWidget {
               Container(
                 height: 95,
                 width: 95,
-                color: Colors.red,
                 child: Image.asset(
                   "assets/images/lesson7/Oval.jpg",
                   width: 92,

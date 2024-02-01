@@ -26,6 +26,7 @@ class HomePageLesson6 extends StatelessWidget {
                 height: 115,
                 width: 85,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
                       'assets/images/lesson6/Oval.jpg',

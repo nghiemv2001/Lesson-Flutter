@@ -179,9 +179,10 @@ class _ContainTextFormFiledState extends State<ContainTextFormFiled> {
             const SizedBox(
               height: 30,
             ),
-            SizedBox(
+            Container(
               height: 44,
               width: double.infinity,
+              color: Color(0xFF3797EF).withOpacity(0.5),
               child: ElevatedButton(
                 style: FilledButton.styleFrom(
                   backgroundColor: const Color(0xFF3797EF),

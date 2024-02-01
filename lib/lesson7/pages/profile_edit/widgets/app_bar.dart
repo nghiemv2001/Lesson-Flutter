@@ -6,7 +6,7 @@ class AppBarProfileEdit extends StatelessWidget implements PreferredSize {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFFFAFAFA),
+      backgroundColor: Color(0xFFA6A6AA).withOpacity(0.33),
       elevation: 0,
       centerTitle: true,
       actions: [
@@ -56,15 +56,6 @@ class AppBarProfileEdit extends StatelessWidget implements PreferredSize {
           width: 11,
         )
       ],
-      bottom: PreferredSize(
-        preferredSize: Size.fromHeight(0.5),
-        child: Container(
-          height: 1,
-          decoration: BoxDecoration(
-            color: Color(0x1A000000),
-          ),
-        ),
-      ),
     );
   }
 
