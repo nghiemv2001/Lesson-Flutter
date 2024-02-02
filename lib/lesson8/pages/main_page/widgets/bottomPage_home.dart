@@ -17,7 +17,7 @@ class BottomPage extends StatelessWidget {
                 ),
               ),
               Image.asset(
-                "assets/images/image_oval.jpg",
+                "assets/images/lesson8/image_oval.jpg",
                 width: 17,
                 fit: BoxFit.fitWidth,
               ),

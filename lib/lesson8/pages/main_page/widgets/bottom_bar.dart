@@ -15,31 +15,31 @@ class BottomBar extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Image.asset(
-            "assets/images/image_tab1.jpg",
+            "assets/images/lesson8/image_tab1.jpg",
             width: 22,
             fit: BoxFit.fitWidth,
           )),
           Expanded(
               child: Image.asset(
-            "assets/images/image_tab2.png",
+            "assets/images/lesson8/image_tab2.png",
             width: 22,
             fit: BoxFit.fitWidth,
           )),
           Expanded(
               child: Image.asset(
-            "assets/images/image_tab3.png",
+            "assets/images/lesson8/image_tab3.png",
             width: 22,
             fit: BoxFit.fitWidth,
           )),
           Expanded(
               child: Image.asset(
-            "assets/images/image_tab4.png",
+            "assets/images/lesson8/image_tab4.png",
             width: 22,
             fit: BoxFit.fitWidth,
           )),
           Expanded(
               child: Image.asset(
-            "assets/images/image_tab5.png",
+            "assets/images/lesson8/image_tab5.png",
             width: 24,
             fit: BoxFit.fitWidth,
           )),

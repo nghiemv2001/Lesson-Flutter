@@ -11,7 +11,7 @@ class AppBarHome extends StatelessWidget implements PreferredSize {
       leading: Padding(
         padding: EdgeInsets.only(left: 12),
         child: Image.asset(
-          "assets/images/image_camera_icon.jpg",
+          "assets/images/lesson8/image_camera_icon.jpg",
           width: 24,
           fit: BoxFit.fitWidth,
         ),
@@ -21,7 +21,7 @@ class AppBarHome extends StatelessWidget implements PreferredSize {
       title: Padding(
         padding: EdgeInsets.only(top: 10, bottom: 6),
         child: Image.asset(
-          "assets/images/image_logo_instagram.jpg",
+          "assets/images/lesson8/image_logo_instagram.jpg",
           width: 105,
           fit: BoxFit.fitWidth,
         ),
@@ -31,7 +31,7 @@ class AppBarHome extends StatelessWidget implements PreferredSize {
           padding: EdgeInsets.only(top: 7),
           child: Stack(alignment: Alignment.topRight, children: [
             Image.asset(
-              'assets/images/image_shape_icon.jpg',
+              'assets/images/lesson8/image_shape_icon.jpg',
               width: 24,
               fit: BoxFit.fitWidth,
             ),
@@ -51,7 +51,7 @@ class AppBarHome extends StatelessWidget implements PreferredSize {
           width: 18,
         ),
         Image.asset(
-          'assets/images/image_messager_icon.jpg',
+          'assets/images/lesson8/image_messager_icon.jpg',
           width: 23,
           fit: BoxFit.fitWidth,
         ),

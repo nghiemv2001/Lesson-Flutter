@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Poster extends StatelessWidget {
+class Poster extends StatefulWidget {
   const Poster({Key? key}) : super(key: key);
 
+  @override
+  State<Poster> createState() => _PosterState();
+}
+
+class _PosterState extends State<Poster> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +29,7 @@ class Poster extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(40),
                         child: Image.asset(
-                          "assets/images/person2.jpg",
+                          "assets/images/lesson8/person2.jpg",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -45,7 +52,7 @@ class Poster extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.only(left: 3),
                               child: Image.asset(
-                                'assets/images/Shape.jpg',
+                                'assets/images/lesson8/Shape.jpg',
                                 width: 9,
                                 fit: BoxFit.fitWidth,
                               ),
@@ -66,7 +73,7 @@ class Poster extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: Image.asset(
-                "assets/images/image_points_icon.jpg",
+                "assets/images/lesson8/image_points_icon.jpg",
                 fit: BoxFit.cover,
               ),
             )
@@ -79,9 +86,37 @@ class Poster extends StatelessWidget {
               height: 375,
               width: double.infinity,
               color: Colors.orange,
-              child: Image.asset(
-                "assets/images/image_poster.jpg",
-                fit: BoxFit.cover,
+              child: PageView(
+                controller: _pageController,
+                pageSnapping: true,
+                onPageChanged: (int page) {
+                  setState(() {
+                    _currentPage = page;
+                  });
+                },
+                children: [
+                  Container(
+                      color: Colors.red,
+                      child: Image.asset(
+                        "assets/images/lesson8/image_poster.jpg",
+                        width: 375,
+                        fit: BoxFit.fitWidth,
+                      )),
+                  Container(
+                      color: Colors.red,
+                      child: Image.asset(
+                        "assets/images/lesson8/image_poster.jpg",
+                        width: 375,
+                        fit: BoxFit.fitWidth,
+                      )),
+                  Container(
+                      color: Colors.red,
+                      child: Image.asset(
+                        "assets/images/lesson8/image_poster.jpg",
+                        width: 375,
+                        fit: BoxFit.fitWidth,
+                      )),
+                ],
               ),
             ),
             Padding(
@@ -94,7 +129,7 @@ class Poster extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15)),
                 child: Center(
                   child: Text(
-                    "1/3",
+                    "${_currentPage + 1}/3",
                     style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ),
@@ -116,17 +151,17 @@ class Poster extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Image.asset(
-                        "assets/images/image_like.jpg",
+                        "assets/images/lesson8/image_like.jpg",
                         width: 24,
                         fit: BoxFit.fitWidth,
                       ),
                       Image.asset(
-                        "assets/images/image_comment.jpg",
+                        "assets/images/lesson8/image_comment.jpg",
                         width: 24,
                         fit: BoxFit.fitWidth,
                       ),
                       Image.asset(
-                        "assets/images/image_messager_icon.jpg",
+                        "assets/images/lesson8/image_messager_icon.jpg",
                         width: 24,
                         fit: BoxFit.fitWidth,
                       ),
@@ -138,14 +173,14 @@ class Poster extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 70),
                 child: Container(
                   child: Image.asset(
-                    "assets/images/image_pagination.jpg",
+                    "assets/images/lesson8/image_pagination.jpg",
                     width: 26,
                     fit: BoxFit.fitWidth,
                   ),
                 ),
               ),
               Image.asset(
-                "assets/images/image_save.jpg",
+                "assets/images/lesson8/image_save.jpg",
                 width: 24,
                 fit: BoxFit.fitWidth,
               ),

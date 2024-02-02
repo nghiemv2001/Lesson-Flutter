@@ -70,7 +70,7 @@ class _ListCardItemState extends State<ListCardItem> {
                                     child: Stack(
                                       children: [
                                         Image.asset(
-                                          'assets/images/${e.image}',
+                                          'assets/images/lesson8/${e.image}',
                                           fit: BoxFit.cover,
                                           width: 56,
                                           height: 56,

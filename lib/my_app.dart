@@ -1,4 +1,4 @@
-import 'package:design_ui_instagram/lesson8/pages/profile_page/profile-page.dart';
+import 'package:design_ui_instagram/lesson8/pages/main_page/main_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profile_Page(),
+      home: Main_Page(),
     );
   }
 }
