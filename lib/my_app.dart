@@ -1,4 +1,4 @@
-import 'package:design_ui_instagram/lesson8/pages/main_page/main_page.dart';
+import 'package:design_ui_instagram/example_widgets/page_view/page_view_example_3.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,9 +6,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Main_Page(),
+      home: PageViewExample3(),
     );
   }
 }
