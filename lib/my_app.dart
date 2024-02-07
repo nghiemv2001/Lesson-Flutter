@@ -1,4 +1,4 @@
-import 'package:design_ui_instagram/example_widgets/page_view/page_view_example_3.dart';
+import 'package:design_ui_instagram/pages/like_page/like_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PageViewExample3(),
+      home: LikePage(),
     );
   }
 }
