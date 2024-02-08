@@ -1,11 +1,68 @@
 import 'package:flutter/material.dart';
 
 class App_Bar_Widget extends StatelessWidget implements PreferredSize {
-  const App_Bar_Widget({Key? key}) : super(key: key);
+  const App_Bar_Widget({required stateAppBar, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AppBar();
+    return AppBar(
+      backgroundColor: Color(0xFFA6A6AA).withOpacity(0.33),
+      elevation: 0,
+      leadingWidth: 36,
+      actions: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 7),
+          child: Row(
+            children: [
+              Container(
+                width: 180,
+                height: 44,
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      width: 1,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Folowing",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 180,
+                height: 44,
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      width: 1,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Folowing",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
   }
 
   @override
