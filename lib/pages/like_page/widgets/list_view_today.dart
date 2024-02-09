@@ -9,6 +9,7 @@ class ListView_Notification_Today extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(left: 5),
       height: 106,
       decoration: BoxDecoration(
           border: Border(
