@@ -76,6 +76,8 @@ flutter:
     - assets/icons/search_page/
     - assets/images/like_page/
     - assets/icons/like_page/
+    - assets/images/igtv/
+    - assets/icons/igtv/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

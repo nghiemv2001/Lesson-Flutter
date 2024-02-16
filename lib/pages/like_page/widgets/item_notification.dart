@@ -8,6 +8,7 @@ class ItemNotification_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(bottom: 16),
       height: 60,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
