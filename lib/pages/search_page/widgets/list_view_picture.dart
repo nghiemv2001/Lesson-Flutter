@@ -10,26 +10,111 @@ class List_View_Picture_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView.builder(
-        itemCount: Images.length,
-        itemBuilder: (context, index) {
-          final item = Images[index];
-          return StaggeredGrid.count(
-            crossAxisCount: 3,
-            mainAxisSpacing: 1,
-            crossAxisSpacing: 1,
-            children: [
-              StaggeredGridTile.count(
-                crossAxisCellCount: (item.big == true) ? 2 : 1,
-                mainAxisCellCount: (item.big == true) ? 2 : 1,
-                child: Image.asset(
-                  item.image,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
-          );
-        },
+      child: StaggeredGrid.count(
+        crossAxisCount: 3,
+        mainAxisSpacing: 1,
+        crossAxisSpacing: 1,
+        children: [
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Gallery.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 2,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle1.jpg",
+              width: 250,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle2.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle3.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle4.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle5.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle6.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle7.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle8.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 2,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle.png",
+              width: 249,
+              fit: BoxFit.cover,
+            ),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Image.asset(
+              "assets/images/search_page/Rectangle10.jpg",
+              width: 124,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:design_ui_instagram/pages/search_page/widgets/bottom_bar.dart';
 import 'package:design_ui_instagram/pages/search_page/widgets/card_view.dart';
 import 'package:design_ui_instagram/pages/search_page/widgets/list_view_picture.dart';
 import 'package:design_ui_instagram/pages/search_page/widgets/search_bar.dart';
@@ -43,7 +44,7 @@ class _SearchPageState extends State<SearchPage> {
           width: double.infinity,
           child: Column(
             children: <Widget>[
-              Search_Bar_widget(),
+              const Search_Bar_widget(),
               Card_View_Widget(
                 itemFavouritese: itemFavourites,
               ),
@@ -53,6 +54,7 @@ class _SearchPageState extends State<SearchPage> {
             ],
           ),
         ),
+        bottomNavigationBar: Bottom_Bar(),
       ),
     );
   }

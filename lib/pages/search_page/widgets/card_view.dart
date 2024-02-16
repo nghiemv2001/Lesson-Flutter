@@ -29,7 +29,10 @@ class Card_View_Widget extends StatelessWidget {
                       height: 32,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(3),
-                        border: Border.all(width: 0.1),
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.black.withOpacity(0.2),
+                        ),
                       ),
                       child: Row(
                         children: <Widget>[
