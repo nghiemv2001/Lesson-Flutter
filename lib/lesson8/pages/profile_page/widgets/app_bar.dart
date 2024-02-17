@@ -45,10 +45,14 @@ class AppBar_Page extends StatelessWidget implements PreferredSize {
           ],
         ),
         const SizedBox(
-          width: 103,
+          width: 70,
         ),
-        Padding(
-          padding: const EdgeInsets.only(right: 13),
+        ElevatedButton(
+          onPressed: () {
+            Scaffold.of(context).openEndDrawer();
+          },
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFFFFFFFF), elevation: 0),
           child: SvgPicture.asset(
             'assets/icons/lesson8/Menu.svg',
             width: 21,
