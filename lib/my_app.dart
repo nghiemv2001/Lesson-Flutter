@@ -1,6 +1,6 @@
+import 'package:design_ui_instagram/pages/live_page/live_page.dart';
+import 'package:design_ui_instagram/pages/story_page/story_page.dart';
 import 'package:flutter/material.dart';
-
-import 'lesson8/pages/profile_page/profile-page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profile_Page(),
+      home: Live_Page(),
     );
   }
 }

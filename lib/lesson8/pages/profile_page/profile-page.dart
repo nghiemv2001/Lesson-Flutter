@@ -24,7 +24,7 @@ class _Profile_PageState extends State<Profile_Page> {
           ),
           color: Color(0xFFFFFFFF),
         ),
-        width: 251,
+        width: MediaQuery.of(context).size.width * 2 / 3,
         height: double.infinity,
         child: Drawer(
           child: Column(
@@ -34,14 +34,14 @@ class _Profile_PageState extends State<Profile_Page> {
                   padding: EdgeInsets.zero,
                   children: [
                     Container(
-                      height: 88,
+                      height: 120,
                       child: DrawerHeader(
-                        margin: EdgeInsets.only(top: 5),
+                        margin: EdgeInsets.only(top: 0),
                         decoration: BoxDecoration(
                           color: Color(0xFFFFFFFF),
                         ),
                         child: Container(
-                          margin: EdgeInsets.only(top: 30),
+                          margin: EdgeInsets.only(top: 0),
                           child: Text(
                             's.khasanov_',
                             style: TextStyle(
@@ -104,7 +104,9 @@ class _Profile_PageState extends State<Profile_Page> {
         color: Color(0xFFFFFFFF),
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
         style: ElevatedButton.styleFrom(
             backgroundColor: Color(0xFFFFFFFF), elevation: 0),
         child: Row(
