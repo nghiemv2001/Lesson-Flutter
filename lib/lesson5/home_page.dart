@@ -37,9 +37,10 @@ class _HomePageState extends State<HomePage> {
               stories: stories,
             ),
             Expanded(
-                child: Container(
-              color: Colors.orange,
-            ))
+              child: Container(
+                color: Colors.orange,
+              ),
+            )
           ],
         ),
       ),

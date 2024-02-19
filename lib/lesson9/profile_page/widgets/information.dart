@@ -391,23 +391,9 @@ class _Information_WIdgetState extends State<Information_WIdget>
                     child: Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 15),
-                          width: MediaQuery.of(context).size.width,
-                          height: 1,
-                          decoration: BoxDecoration(
-                            border: Border(
-                              top: BorderSide(
-                                color: Color(0xFF3C3C43).withOpacity(0.2),
-                                width: 1.0,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
                           height: 44,
                           child: TabBar(
                             indicatorColor: Colors.black,
-                            indicatorWeight: 1,
                             controller: tabController,
                             tabs: [
                               Tab(

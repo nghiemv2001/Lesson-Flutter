@@ -12,7 +12,7 @@ class BottomPage extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Image.asset(
-                "assets/images/image_oval.jpg",
+                "assets/images/lesson8/image_oval.jpg",
                 width: 17,
                 fit: BoxFit.fitWidth,
               ),
@@ -39,7 +39,7 @@ class BottomPage extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 5, right: 15, left: 15),
+          padding: const EdgeInsets.only(right: 15, left: 15),
           child: RichText(
             text: TextSpan(
               style: DefaultTextStyle.of(context).style,

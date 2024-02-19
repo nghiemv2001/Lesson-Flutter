@@ -24,11 +24,12 @@ class _ListCardItemState extends State<ListCardItem> {
       scrollDirection: Axis.horizontal,
       child: Container(
         decoration: const BoxDecoration(
-            border: Border(
-          bottom: BorderSide(width: 1, color: Colors.black26),
-        )),
+          border: Border(
+            bottom: BorderSide(width: 1, color: Colors.black26),
+          ),
+        ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 9, bottom: 8, left: 10),
+          padding: const EdgeInsets.only(top: 8, bottom: 4, left: 10),
           child: Row(
             children: images
                 .map(
