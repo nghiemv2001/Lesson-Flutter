@@ -17,6 +17,7 @@ class Drawer_Widgets extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 2 / 3,
       height: MediaQuery.of(context).size.height,
       child: Drawer(
+        backgroundColor: Color(0xFFFFFFFF),
         child: Column(
           children: [
             Expanded(

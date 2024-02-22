@@ -103,14 +103,14 @@ class _LikePageState extends State<LikePage> {
               children: <Widget>[
                 App_Bar_Custom(),
                 Follow_Required(),
-                ListView_Notification(
+                ListViewNotification(
                   notifications: notifications,
                 ),
-                ListView_Notification_Today(
+                ListViewNotificationToday(
                   notifications: notifications,
                 ),
-                ListView_Notification_Week(notifications: notifications),
-                ListView_Notification_Month(notifications: notifications),
+                ListViewNotificationWeek(notifications: notifications),
+                ListViewNotificationMonth(notifications: notifications),
               ],
             ),
           ),

@@ -37,25 +37,23 @@ class _SearchPageState extends State<SearchPage> {
     ItemImage(image: "assets/images/search_page/Gallery.jpg", big: false),
   ];
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SizedBox(
-          width: double.infinity,
-          child: Column(
-            children: <Widget>[
-              const Search_Bar_widget(),
-              Card_View_Widget(
-                itemFavouritese: itemFavourites,
-              ),
-              List_View_Picture_Widget(
-                Images: Images,
-              ),
-            ],
+  Widget build(BuildContext context) => SafeArea(
+        child: Scaffold(
+          body: SizedBox(
+            width: double.infinity,
+            child: Column(
+              children: <Widget>[
+                SearchInSearchPage(),
+                CardViewWidget(
+                  itemFavouritese: itemFavourites,
+                ),
+                GirdViewPicture(
+                  Images: Images,
+                ),
+              ],
+            ),
           ),
+          bottomNavigationBar: const Bottom_Bar(),
         ),
-        bottomNavigationBar: Bottom_Bar(),
-      ),
-    );
-  }
+      );
 }

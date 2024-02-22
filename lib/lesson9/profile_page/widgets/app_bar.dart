@@ -64,7 +64,6 @@ class AppBar_Page extends StatelessWidget implements PreferredSize {
         )
       ],
     );
-    ;
   }
 
   @override

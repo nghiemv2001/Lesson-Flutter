@@ -72,6 +72,8 @@ flutter:
     - assets/icons/lesson7/
     - assets/images/lesson8/
     - assets/icons/lesson8/
+    - assets/images/lesson10/
+    - assets/icons/lesson10/
     - assets/images/search_page/
     - assets/icons/search_page/
     - assets/images/like_page/
@@ -86,6 +88,12 @@ flutter:
     - assets/icons/story/
     - assets/images/live/
     - assets/icons/live/
+    - assets/images/my_live/
+    - assets/icons/my_live/
+    - assets/images/picture_short/
+    - assets/icons/picture_short/
+    - assets/images/add_image/
+    - assets/icons/add_image/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

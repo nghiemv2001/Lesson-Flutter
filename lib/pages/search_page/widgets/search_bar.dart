@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Search_Bar_widget extends StatelessWidget {
-  const Search_Bar_widget({Key? key}) : super(key: key);
+class SearchInSearchPage extends StatelessWidget {
+  const SearchInSearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

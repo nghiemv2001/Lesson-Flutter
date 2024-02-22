@@ -11,18 +11,15 @@ class _App_Bar_CustomState extends State<App_Bar_Custom> {
   bool _stateAppBar = true;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 7),
-      child: Row(
-        children: [
-          (_stateAppBar == true)
-              ? Custom_Container_Bold("Following")
-              : Custom_Container_Normal("Following"),
-          (_stateAppBar == false)
-              ? Custom_Container_Bold("You")
-              : Custom_Container_Normal("You"),
-        ],
-      ),
+    return Row(
+      children: [
+        (_stateAppBar == true)
+            ? Custom_Container_Bold("Following")
+            : Custom_Container_Normal("Following"),
+        (_stateAppBar == false)
+            ? Custom_Container_Bold("You")
+            : Custom_Container_Normal("You"),
+      ],
     );
   }
 
@@ -53,7 +50,7 @@ class _App_Bar_CustomState extends State<App_Bar_Custom> {
 
   Widget Custom_Container_Normal(String title) {
     return Container(
-      width: 180,
+      width: 210,
       height: 44,
       decoration: BoxDecoration(
         border: Border(

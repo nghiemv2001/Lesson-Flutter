@@ -1,5 +1,6 @@
-import 'package:design_ui_instagram/lesson9/main_instagram/main_instagram.dart';
 import 'package:flutter/material.dart';
+
+import 'lesson10/instagram_pages.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Main_Instagram(),
+      home: InstagramPages(),
     );
   }
 }
