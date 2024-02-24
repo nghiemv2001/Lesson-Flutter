@@ -6,10 +6,10 @@ class AppBarMainPage extends StatelessWidget implements PreferredSize {
 
   @override
   Widget build(BuildContext context) => AppBar(
-        backgroundColor: Color(0xFFFAFAFA),
+        backgroundColor: const Color(0xFFFAFAFA),
         elevation: 0,
         leading: Padding(
-          padding: EdgeInsets.only(left: 12),
+          padding: const EdgeInsets.only(left: 12),
           child: SvgPicture.asset(
             "assets/icons/lesson10/Camera Icon.svg",
             width: 24,
@@ -19,7 +19,7 @@ class AppBarMainPage extends StatelessWidget implements PreferredSize {
         leadingWidth: 36,
         centerTitle: true,
         title: Padding(
-          padding: EdgeInsets.only(top: 10, bottom: 6),
+          padding: const EdgeInsets.only(top: 10, bottom: 6),
           child: SvgPicture.asset(
             "assets/icons/lesson10/Instagram Logo.svg",
             height: 28,
@@ -56,10 +56,8 @@ class AppBarMainPage extends StatelessWidget implements PreferredSize {
       );
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(44);
+  Size get preferredSize => const Size.fromHeight(44);
 }

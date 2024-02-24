@@ -8,7 +8,7 @@ class GirdView_Widgets extends StatefulWidget {
 }
 
 class _GirdView_WidgetsState extends State<GirdView_Widgets> {
-  final List<String> _dataList = [
+  final List<String> _dataList = <String>[
     "assets/images/lesson8/Rectangle.jpg",
     "assets/images/lesson8/Rectangle1.jpg",
     "assets/images/lesson8/Rectangle2.jpg",
@@ -36,25 +36,20 @@ class _GirdView_WidgetsState extends State<GirdView_Widgets> {
   ];
 
   @override
-  Widget build(BuildContext context) {
-    print(_dataList.length);
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        crossAxisSpacing: 1.0,
-        mainAxisSpacing: 1.0,
-      ),
-      itemCount: _dataList.length,
-      itemBuilder: (context, index) {
-        return GridTile(
+  Widget build(BuildContext context) => GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 1,
+          mainAxisSpacing: 1,
+        ),
+        itemCount: _dataList.length,
+        itemBuilder: (context, index) => GridTile(
           child: Image.asset(
             _dataList[index],
             width: 124,
             height: 124,
             fit: BoxFit.cover,
           ),
-        );
-      },
-    );
-  }
+        ),
+      );
 }

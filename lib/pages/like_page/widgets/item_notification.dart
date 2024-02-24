@@ -7,16 +7,15 @@ class ItemNotificationWidget extends StatelessWidget {
   final ItemNotification itemNotification;
   @override
   Widget build(BuildContext context) => Container(
-        padding: EdgeInsets.only(bottom: 16),
+        padding: const EdgeInsets.only(bottom: 16),
         height: 60,
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             if (itemNotification.images.length == 1)
               Container(
                 height: 44,
                 width: 44,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
@@ -34,7 +33,7 @@ class ItemNotificationWidget extends StatelessWidget {
               Container(
                 height: 44,
                 width: 44,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Stack(
@@ -93,7 +92,7 @@ class ItemNotificationWidget extends StatelessWidget {
                 ),
               ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Container(
                 width: (itemNotification.status == 1 ||
                         itemNotification.status == 2)
@@ -101,8 +100,8 @@ class ItemNotificationWidget extends StatelessWidget {
                     : 230,
                 margin: (itemNotification.status == 1 ||
                         itemNotification.status == 2)
-                    ? EdgeInsets.only(right: 30)
-                    : EdgeInsets.only(right: 10),
+                    ? const EdgeInsets.only(right: 30)
+                    : const EdgeInsets.only(right: 10),
                 child: RichText(
                   text: TextSpan(
                     children: <TextSpan>[
@@ -119,7 +118,7 @@ class ItemNotificationWidget extends StatelessWidget {
                         TextSpan(
                           text:
                               "${itemNotification.names[0]}, ${itemNotification.names[1]}",
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFF262626),
                             fontSize: 13,
                             fontWeight: FontWeight.w400,
@@ -128,7 +127,7 @@ class ItemNotificationWidget extends StatelessWidget {
                       TextSpan(
                         text: " ${itemNotification.message}",
                         style: TextStyle(
-                          color: Color(0xFF000000).withOpacity(0.4),
+                          color: const Color(0xFF000000).withOpacity(0.4),
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
                         ),
@@ -138,7 +137,7 @@ class ItemNotificationWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             if (itemNotification.status == 0)
@@ -157,12 +156,13 @@ class ItemNotificationWidget extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.5),
                         ),
                       ),
-                      child: Center(
-                          child: Text(
-                        "Message",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
-                      )),
+                      child: const Center(
+                        child: Text(
+                          "Message",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     )
                   : Container(
                       width: 90,

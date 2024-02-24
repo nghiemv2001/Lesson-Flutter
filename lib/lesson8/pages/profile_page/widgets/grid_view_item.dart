@@ -11,47 +11,45 @@ class GridItem extends StatelessWidget {
   final int index;
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Color(Random().nextInt(0xffffffff)),
-      child: Center(
-        child: Stack(
-          children: [
-            Image.network(
-              'https://picsum.photos/250?image=$index',
-              errorBuilder: (context, url, error) => const Icon(
-                Icons.error,
-                color: Colors.red,
-                size: 124,
+  Widget build(BuildContext context) => Container(
+        color: Color(Random().nextInt(0xffffffff)),
+        child: Center(
+          child: Stack(
+            children: [
+              Image.network(
+                'https://picsum.photos/250?image=$index',
+                errorBuilder: (context, url, error) => const Icon(
+                  Icons.error,
+                  color: Colors.red,
+                  size: 124,
+                ),
+                fit: BoxFit.fitWidth,
               ),
-              fit: BoxFit.fitWidth,
-            ),
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.center,
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                  child: Center(
-                    child: Text(
-                      index.toString(),
-                      style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.black.withOpacity(0.5),
+                    ),
+                    child: Center(
+                      child: Text(
+                        index.toString(),
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

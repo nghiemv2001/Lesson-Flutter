@@ -1,7 +1,6 @@
+import 'package:design_ui_instagram/lesson9/profile_page/widgets/gird_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../../lesson9/profile_page/widgets/gird_view.dart';
 
 class BodyProfilePage extends StatefulWidget {
   const BodyProfilePage({Key? key}) : super(key: key);
@@ -21,7 +20,6 @@ class _BodyProfilePageState extends State<BodyProfilePage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     tabController = TabController(length: 2, vsync: this);
   }
@@ -29,8 +27,8 @@ class _BodyProfilePageState extends State<BodyProfilePage>
   @override
   Widget build(BuildContext context) => SafeArea(
         child: SizedBox(
-          height: double.infinity,
-          width: double.infinity,
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -139,13 +137,13 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 16.0, right: 16, top: 12),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 12),
                 child: SizedBox(
                   height: 49,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
+                    children: <Widget>[
+                      const Text(
                         "Jacob West",
                         style: TextStyle(
                           fontSize: 12,
@@ -154,8 +152,8 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                         ),
                       ),
                       RichText(
-                        text: TextSpan(
-                          children: const [
+                        text: const TextSpan(
+                          children: [
                             TextSpan(
                               text: 'Digital goodies designer ',
                               style: TextStyle(
@@ -175,7 +173,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           ],
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Everything is designed.",
                         style: TextStyle(
                           fontSize: 12,
@@ -188,19 +186,19 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Container(
                   height: 32,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: Color(0xFF3C3C43).withOpacity(0.18),
+                      color: const Color(0xFF3C3C43).withOpacity(0.18),
                       width: 1,
                     ),
                   ),
                   child: TextButton(
                     onPressed: () {},
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Edit Profile",
                         style: TextStyle(
@@ -219,16 +217,16 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                   height: 83,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: <Widget>[
                       Column(
-                        children: [
+                        children: <Widget>[
                           Container(
                             height: 64,
                             width: 64,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFFC7C7CC),
+                                color: const Color(0xFFC7C7CC),
                                 width: 1,
                               ),
                             ),
@@ -244,10 +242,10 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text("New"),
+                          const Text("New"),
                         ],
                       ),
                       Column(
@@ -258,7 +256,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFFC7C7CC),
+                                color: const Color(0xFFC7C7CC),
                                 width: 1,
                               ),
                             ),
@@ -286,10 +284,10 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text("Friends"),
+                          const Text("Friends"),
                         ],
                       ),
                       Column(
@@ -300,7 +298,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFFC7C7CC),
+                                color: const Color(0xFFC7C7CC),
                                 width: 1,
                               ),
                             ),
@@ -328,10 +326,10 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text("Sport"),
+                          const Text("Sport"),
                         ],
                       ),
                       Column(
@@ -342,7 +340,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFFC7C7CC),
+                                color: const Color(0xFFC7C7CC),
                                 width: 1,
                               ),
                             ),
@@ -370,74 +368,74 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text("Design"),
+                          const Text("Design"),
                         ],
                       )
                     ],
                   ),
                 ),
               ),
-              Container(
-                height: 324,
+              Expanded(
                 child: DefaultTabController(
                   length: 2,
                   child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 15),
-                            width: MediaQuery.of(context).size.width,
-                            height: 1,
-                            decoration: BoxDecoration(
-                              border: Border(
-                                top: BorderSide(
-                                  color: Color(0xFF3C3C43).withOpacity(0.2),
-                                  width: 1.0,
-                                ),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 15),
+                          width: MediaQuery.of(context).size.width,
+                          height: 1,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              top: BorderSide(
+                                color: const Color(0xFF3C3C43).withOpacity(0.2),
+                                width: 1.0,
                               ),
                             ),
                           ),
-                          Container(
-                            height: 44,
-                            child: TabBar(
-                              indicatorColor: Colors.black,
-                              indicatorWeight: 1,
-                              controller: tabController,
-                              tabs: [
-                                Tab(
-                                  icon: SvgPicture.asset(
-                                    "assets/icons/lesson8/Grid Icon.svg",
-                                  ),
+                        ),
+                        SizedBox(
+                          height: 44,
+                          child: TabBar(
+                            indicatorColor: Colors.black,
+                            indicatorWeight: 1,
+                            controller: tabController,
+                            tabs: [
+                              Tab(
+                                icon: SvgPicture.asset(
+                                  "assets/icons/lesson8/Grid Icon.svg",
                                 ),
-                                Tab(
-                                  icon: SvgPicture.asset(
-                                    "assets/icons/lesson8/Tags Icon.svg",
-                                  ),
-                                ),
-                              ],
-                              labelColor: Colors.black,
-                            ),
-                          ),
-                          SingleChildScrollView(
-                            child: Container(
-                              padding: EdgeInsets.only(bottom: 40),
-                              height: 333,
-                              child: TabBarView(
-                                controller: tabController,
-                                children: [
-                                  GirdView_Widgets(),
-                                  GirdView_Widgets(),
-                                ],
                               ),
-                            ),
+                              Tab(
+                                icon: SvgPicture.asset(
+                                  "assets/icons/lesson8/Tags Icon.svg",
+                                ),
+                              ),
+                            ],
+                            labelColor: Colors.black,
                           ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: TabBarView(
+                                  controller: tabController,
+                                  children: const <Widget>[
+                                    GirdViewWidgets(),
+                                    GirdViewWidgets(),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

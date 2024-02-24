@@ -6,18 +6,16 @@ class StoryItem extends StatelessWidget {
   const StoryItem({Key? key, required this.story}) : super(key: key);
   final Story story;
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        AvatarItem(
-          avater: story.avatar,
-          isLive: story.isLive,
-        ),
-        Text(
-          story.name,
-          style: TextStyle(fontSize: 12),
-        )
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Column(
+        children: <Widget>[
+          AvatarItem(
+            avater: story.avatar,
+            isLive: story.isLive,
+          ),
+          Text(
+            story.name,
+            style: const TextStyle(fontSize: 12),
+          )
+        ],
+      );
 }

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class GirdViewPicture extends StatelessWidget {
-  const GirdViewPicture({required this.Images, Key? key}) : super(key: key);
-  final List<ItemImage> Images;
+  const GirdViewPicture({required this.images, Key? key}) : super(key: key);
+  final List<ItemImage> images;
 
   @override
   Widget build(BuildContext context) => Expanded(
@@ -12,7 +12,7 @@ class GirdViewPicture extends StatelessWidget {
           crossAxisCount: 3,
           mainAxisSpacing: 1,
           crossAxisSpacing: 1,
-          children: [
+          children: <Widget>[
             StaggeredGridTile.count(
               crossAxisCellCount: 1,
               mainAxisCellCount: 1,

@@ -14,7 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final List<Item> _listUser = [
+  final List<Item> _listUser = <Item>[
     Item(name: 'Your Story', image: 'Inner Oval.png', status: false),
     Item(name: 'karennne', image: 'Inner Oval (1).png', status: true),
     Item(name: 'zackjohn', image: 'Inner Oval (2).png', status: false),
@@ -26,7 +26,7 @@ class _MainPageState extends State<MainPage> {
     Item(name: 'kieron_d', image: 'Inner Oval (3).png', status: false),
     Item(name: 'craig_d', image: 'Inner Oval (4).png', status: false),
   ];
-  List<Post> posts = [
+  List<Post> posts = <Post>[
     const Post(
       name: 'joshua_l',
       avatar: "assets/images/lesson10/Oval.png",
@@ -129,17 +129,15 @@ class _MainPageState extends State<MainPage> {
     ),
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarMainPage(),
-      body: SafeArea(
-        child: Column(
-          children: [
-            ListUser(listUser: _listUser),
-            PostListView(posts: posts),
-          ],
+  Widget build(BuildContext context) => Scaffold(
+        appBar: const AppBarMainPage(),
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              ListUser(listUser: _listUser),
+              PostListView(posts: posts),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

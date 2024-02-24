@@ -4,72 +4,66 @@ class App_Bar_Widget extends StatelessWidget implements PreferredSize {
   const App_Bar_Widget({required stateAppBar, Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Color(0xFFA6A6AA).withOpacity(0.33),
-      elevation: 0,
-      leadingWidth: 36,
-      actions: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 7),
-          child: Row(
-            children: [
-              Container(
-                width: 180,
-                height: 44,
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      width: 1,
-                      color: Colors.black,
+  Widget build(BuildContext context) => AppBar(
+        backgroundColor: const Color(0xFFA6A6AA).withOpacity(0.33),
+        elevation: 0,
+        leadingWidth: 36,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7),
+            child: Row(
+              children: [
+                Container(
+                  width: 180,
+                  height: 44,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Folowing",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Folowing",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                Container(
+                  width: 180,
+                  height: 44,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Following",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Container(
-                width: 180,
-                height: 44,
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      width: 1,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Folowing",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
-    );
-  }
+              ],
+            ),
+          )
+        ],
+      );
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(44);
+  Size get preferredSize => const Size.fromHeight(44);
 }

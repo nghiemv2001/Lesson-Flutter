@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Gird_View_Picture extends StatelessWidget {
-  const Gird_View_Picture({required this.dataImage, Key? key})
-      : super(key: key);
+class GirdViewPicture extends StatelessWidget {
+  const GirdViewPicture({required this.dataImage, super.key});
   final List<String> dataImage;
   @override
-  Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3, mainAxisSpacing: 1, crossAxisSpacing: 1),
-      itemBuilder: (context, index) {
-        return Container(
+  Widget build(BuildContext context) => GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          mainAxisSpacing: 1,
+          crossAxisSpacing: 1,
+        ),
+        itemBuilder: (context, index) => SizedBox(
           height: 124,
           width: 124,
           child: Image.asset(
@@ -19,9 +19,7 @@ class Gird_View_Picture extends StatelessWidget {
             height: 124,
             fit: BoxFit.cover,
           ),
-        );
-      },
-      itemCount: dataImage.length,
-    );
-  }
+        ),
+        itemCount: dataImage.length,
+      );
 }

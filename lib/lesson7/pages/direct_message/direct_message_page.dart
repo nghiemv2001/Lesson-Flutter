@@ -4,17 +4,17 @@ import 'package:design_ui_instagram/lesson7/pages/direct_message/widgets/bottom_
 import 'package:design_ui_instagram/lesson7/pages/direct_message/widgets/list_view.dart';
 import 'package:flutter/material.dart';
 
-import 'modals/itemMessage.dart';
+import 'modals/item_message.dart';
 
-class Direct_Message_Page extends StatefulWidget {
-  const Direct_Message_Page({Key? key}) : super(key: key);
+class DirectMessagePage extends StatefulWidget {
+  const DirectMessagePage({Key? key}) : super(key: key);
 
   @override
-  State<Direct_Message_Page> createState() => _Direct_Message_PageState();
+  State<DirectMessagePage> createState() => _DirectMessagePageState();
 }
 
-class _Direct_Message_PageState extends State<Direct_Message_Page> {
-  List<ItemMessage> listMessage = [
+class _DirectMessagePageState extends State<DirectMessagePage> {
+  List<ItemMessage> listMessage = <ItemMessage>[
     ItemMessage(
         name: "joshua_l",
         status: 1,
@@ -71,25 +71,23 @@ class _Direct_Message_PageState extends State<Direct_Message_Page> {
         timeOn: "now"),
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarDirectMessage(),
-      body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                height: 10,
-              ),
-              AppBarSearch(),
-              ListViewWidget(listmessage: listMessage),
-              BottomBarWidget()
-            ],
+  Widget build(BuildContext context) => Scaffold(
+        appBar: const AppBarDirectMessage(),
+        body: SafeArea(
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                const SizedBox(
+                  height: 10,
+                ),
+                const AppBarSearch(),
+                ListViewWidget(listmessage: listMessage),
+                const BottomBarWidget()
+              ],
+            ),
           ),
         ),
-      ),
-    );
-  }
+      );
 }

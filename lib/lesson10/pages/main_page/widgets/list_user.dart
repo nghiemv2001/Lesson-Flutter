@@ -7,7 +7,7 @@ class ListUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Container(
+        child: DecoratedBox(
           decoration: BoxDecoration(
             border: Border(
               bottom: BorderSide(

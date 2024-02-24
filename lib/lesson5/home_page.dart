@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Story> stories = [
+  List<Story> stories = <Story>[
     const Story(name: 'Your Story', avatar: 'assets/images/avatar.png'),
     const Story(
       name: 'karennne',
@@ -27,23 +27,21 @@ class _HomePageState extends State<HomePage> {
     const Story(name: 'craig_love', avatar: 'assets/images/avatar4.png'),
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: HomeAppBar(),
-      body: SafeArea(
-        child: Column(
-          children: [
-            StoryListView(
-              stories: stories,
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.orange,
+  Widget build(BuildContext context) => Scaffold(
+        appBar: const HomeAppBar(),
+        body: SafeArea(
+          child: Column(
+            children: [
+              StoryListView(
+                stories: stories,
               ),
-            )
-          ],
+              Expanded(
+                child: Container(
+                  color: Colors.orange,
+                ),
+              )
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

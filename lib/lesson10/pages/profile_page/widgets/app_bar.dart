@@ -6,7 +6,7 @@ class AppBarProfilePage extends StatelessWidget implements PreferredSize {
 
   @override
   Widget build(BuildContext context) => AppBar(
-        backgroundColor: Color(0xFFFAFAFA),
+        backgroundColor: const Color(0xFFFAFAFA),
         elevation: 0,
         centerTitle: true,
         actions: [
@@ -44,7 +44,7 @@ class AppBarProfilePage extends StatelessWidget implements PreferredSize {
               Scaffold.of(context).openEndDrawer();
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFFAFAFA),
+              backgroundColor: const Color(0xFFFAFAFA),
               elevation: 0,
             ),
             child: SvgPicture.asset(
@@ -60,10 +60,8 @@ class AppBarProfilePage extends StatelessWidget implements PreferredSize {
       );
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(44);
+  Size get preferredSize => const Size.fromHeight(44);
 }

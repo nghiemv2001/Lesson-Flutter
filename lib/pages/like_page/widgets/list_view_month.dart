@@ -8,7 +8,7 @@ class ListViewNotificationMonth extends StatelessWidget {
   final List<ItemNotification> notifications;
   @override
   Widget build(BuildContext context) => Container(
-        margin: EdgeInsets.only(left: 5),
+        margin: const EdgeInsets.only(left: 5),
         height: 106,
         decoration: BoxDecoration(
             border: Border(
@@ -19,7 +19,7 @@ class ListViewNotificationMonth extends StatelessWidget {
           children: [
             const Padding(
               padding: EdgeInsets.only(
-                left: 16.0,
+                left: 16,
                 top: 14,
                 bottom: 14,
               ),
@@ -34,21 +34,20 @@ class ListViewNotificationMonth extends StatelessWidget {
             ),
             Expanded(
               child: ListView.separated(
-                  scrollDirection: Axis.vertical,
-                  itemBuilder: (contex, index) =>
-                      (notifications[index].time.day == 6 &&
-                              notifications[index].time.month == 2 &&
-                              notifications[index].time.year == 2024)
-                          ? ItemNotificationWidget(
-                              itemNotification: notifications[index])
-                          : Container(),
-                  separatorBuilder: (BuildContext context, int index) =>
-                      const SizedBox(
-                        width: 16,
-                      ),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  itemCount: notifications.length),
+                itemBuilder: (contex, index) =>
+                    (notifications[index].time.day == 6 &&
+                            notifications[index].time.month == 2 &&
+                            notifications[index].time.year == 2024)
+                        ? ItemNotificationWidget(
+                            itemNotification: notifications[index])
+                        : Container(),
+                separatorBuilder: (BuildContext context, int index) =>
+                    const SizedBox(
+                  width: 16,
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                itemCount: notifications.length,
+              ),
             ),
           ],
         ),

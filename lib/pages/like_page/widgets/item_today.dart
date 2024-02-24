@@ -5,11 +5,10 @@ class ItemToday extends StatelessWidget {
   const ItemToday({Key? key, required this.itemNotification}) : super(key: key);
   final ItemNotification itemNotification;
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [Text("HIIIIIIIIIIIIIIIIIIIII")],
-    );
-  }
+  Widget build(BuildContext context) => const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Text("HIIIIIIIIIIIIIIIIIIIII"),
+        ],
+      );
 }

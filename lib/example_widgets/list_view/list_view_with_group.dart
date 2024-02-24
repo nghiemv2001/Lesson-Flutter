@@ -11,8 +11,8 @@ class ListViewWithGroup extends StatefulWidget {
 
 class _ListViewWithGroupState extends State<ListViewWithGroup> {
   final Map<String, List<String>> _dataMap = {
-    'Group 1': ['Item 11', 'Item 12', 'Item 13'],
-    'Group 2': [
+    'Group 1': <String>['Item 11', 'Item 12', 'Item 13'],
+    'Group 2': <String>[
       'Item 21',
       'Item 22',
       'Item 24',

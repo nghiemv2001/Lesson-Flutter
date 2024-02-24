@@ -6,21 +6,16 @@ class StoryListView extends StatelessWidget {
   const StoryListView({required this.stories, Key? key}) : super(key: key);
   final List<Story> stories;
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 98,
-      child: ListView.separated(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (contex, index) {
-            return StoryItem(story: stories[index]);
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return const SizedBox(
-              width: 16,
-            );
-          },
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          itemCount: stories.length),
-    );
-  }
+  Widget build(BuildContext context) => SizedBox(
+        height: 98,
+        child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (contex, index) => StoryItem(story: stories[index]),
+            separatorBuilder: (BuildContext context, int index) =>
+                const SizedBox(
+                  width: 16,
+                ),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            itemCount: stories.length),
+      );
 }

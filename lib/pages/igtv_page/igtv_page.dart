@@ -11,7 +11,7 @@ class IGTV_Page extends StatefulWidget {
 }
 
 class _IGTV_PageState extends State<IGTV_Page> {
-  List<ItemIGTV> dataIgtv = [
+  List<ItemIGTV> dataIgtv = <ItemIGTV>[
     ItemIGTV(
         image: "assets/images/igtv/image1.jpg",
         time: "9:14",
@@ -39,25 +39,23 @@ class _IGTV_PageState extends State<IGTV_Page> {
   ];
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: App_Bar_IGTV(),
-      body: Column(
-        children: [
-          Image.asset(
-            "assets/images/igtv/Rectangle.jpg",
-            height: 375,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
-          Expanded(
-            child: List_Item(
-              dataItem: dataIgtv,
+  Widget build(BuildContext context) => Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: const App_Bar_IGTV(),
+        body: Column(
+          children: <Widget>[
+            Image.asset(
+              "assets/images/igtv/Rectangle.jpg",
+              height: 375,
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
-          )
-        ],
-      ),
-    );
-  }
+            Expanded(
+              child: List_Item(
+                dataItem: dataIgtv,
+              ),
+            )
+          ],
+        ),
+      );
 }

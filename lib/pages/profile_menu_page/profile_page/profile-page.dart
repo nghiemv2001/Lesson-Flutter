@@ -8,12 +8,10 @@ class Profile_Page extends StatelessWidget {
   const Profile_Page({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const AppBar_Page(),
-      body: const Information_WIdget(),
-      endDrawer: Drawer_Widgets(mainContext: context),
-      bottomNavigationBar: const BottomBar_Widget(),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        appBar: const AppBarPage(),
+        body: const InformationWidget(),
+        endDrawer: DrawerWidgets(mainContext: context),
+        bottomNavigationBar: const BottomBarWidget(),
+      );
 }

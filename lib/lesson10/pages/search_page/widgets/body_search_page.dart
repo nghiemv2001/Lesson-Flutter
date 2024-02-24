@@ -13,7 +13,7 @@ class BodySearchPage extends StatefulWidget {
 }
 
 class BodySearchPageState extends State<BodySearchPage> {
-  List<ItemFavourite> itemFavourites = [
+  List<ItemFavourite> itemFavourites = <ItemFavourite>[
     ItemFavourite(name: "IGTV", image: "assets/icons/search_page/Icon.svg"),
     ItemFavourite(name: "Shop", image: "assets/icons/search_page/Icon1.svg"),
     ItemFavourite(name: "Style"),
@@ -26,7 +26,7 @@ class BodySearchPageState extends State<BodySearchPage> {
     ItemFavourite(name: "Auto"),
   ];
 
-  List<ItemImage> Images = [
+  List<ItemImage> Images = <ItemImage>[
     ItemImage(image: "assets/images/search_page/Gallery.jpg", big: false),
     ItemImage(image: "assets/images/search_page/Gallery.jpg", big: false),
     ItemImage(image: "assets/images/search_page/Gallery.jpg", big: true),
@@ -44,7 +44,7 @@ class BodySearchPageState extends State<BodySearchPage> {
               itemFavouritese: itemFavourites,
             ),
             GirdViewPicture(
-              Images: Images,
+              images: Images,
             ),
           ],
         ),

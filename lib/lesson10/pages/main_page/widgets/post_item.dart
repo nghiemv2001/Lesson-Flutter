@@ -52,12 +52,10 @@ class _PostItemState extends State<PostItem> with TickerProviderStateMixin {
             width: screenWidth,
             height: screenWidth,
             child: PageView.builder(
-              itemBuilder: (context, index) {
-                return Image.asset(
-                  widget.post.images[index],
-                  fit: BoxFit.fitWidth,
-                );
-              },
+              itemBuilder: (context, index) => Image.asset(
+                widget.post.images[index],
+                fit: BoxFit.fitWidth,
+              ),
               itemCount: widget.post.images.length,
               controller: _pageViewController,
               onPageChanged: _handlePageViewChanged,

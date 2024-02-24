@@ -24,7 +24,7 @@ class _BodyMainPageState extends State<BodyMainPage> {
     Item(name: 'kieron_d', image: 'Inner Oval (3).png', status: false),
     Item(name: 'craig_d', image: 'Inner Oval (4).png', status: false),
   ];
-  List<Post> posts = [
+  List<Post> posts = <Post>[
     const Post(
       name: 'joshua_l',
       avatar: "assets/images/lesson10/Oval.png",

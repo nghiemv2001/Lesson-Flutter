@@ -63,8 +63,8 @@ class _GridViewExample3State extends State<GridViewExample3> {
 
       await Future.delayed(const Duration(seconds: 2));
 
-      List<int> newDataList =
-          List.generate(10, (index) => _dataList.length + index + 1);
+      var newDataList =
+          List<int>.generate(10, (index) => _dataList.length + index + 1);
       setState(() {
         _dataList.addAll(newDataList);
         _isLoading = false;

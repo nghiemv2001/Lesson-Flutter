@@ -1,46 +1,45 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
-class Bottom_Navigation_Bar extends StatefulWidget {
-  const Bottom_Navigation_Bar({Key? key}) : super(key: key);
+class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({super.key});
 
   @override
-  State<Bottom_Navigation_Bar> createState() => _Bottom_Navigation_BarState();
+  State<BottomNavigationBar> createState() => _BottomNavigationBarState();
 }
 
-class _Bottom_Navigation_BarState extends State<Bottom_Navigation_Bar> {
+class _BottomNavigationBarState extends State<BottomNavigationBar> {
   var _curentIndex = 0;
   List<Widget> pages = [
-    Icon(
+    const Icon(
       Icons.call,
       size: 50,
     ),
-    Icon(Icons.camera),
-    Icon(Icons.chat)
+    const Icon(Icons.camera),
+    const Icon(Icons.chat)
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: pages[_curentIndex],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
-        selectedFontSize: 20,
-        selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 40),
-        selectedItemColor: Colors.amberAccent,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-          BottomNavigationBarItem(icon: Icon(Icons.camera), label: "Camera"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chats"),
-        ],
-        currentIndex: _curentIndex,
-        onTap: (index) {
-          setState(() {
-            _curentIndex = index;
-          });
-        },
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        body: Center(
+          child: pages[_curentIndex],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.red,
+          selectedFontSize: 20,
+          selectedIconTheme:
+              const IconThemeData(color: Colors.amberAccent, size: 40),
+          selectedItemColor: Colors.amberAccent,
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Calls'),
+            BottomNavigationBarItem(icon: Icon(Icons.camera), label: 'Camera'),
+            BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
+          ],
+          currentIndex: _curentIndex,
+          onTap: (index) {
+            setState(() {
+              _curentIndex = index;
+            });
+          },
+        ),
+      );
 }

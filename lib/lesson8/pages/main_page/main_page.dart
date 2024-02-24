@@ -1,7 +1,7 @@
-import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/appbar_home.dart';
-import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/bottomPage_home.dart';
+import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/app_bar_home.dart';
 import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/bottom_bar.dart';
-import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/listCardView_home.dart';
+import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/bottom_page_home.dart';
+import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/list_card_view_home.dart';
 import 'package:design_ui_instagram/lesson8/pages/main_page/widgets/poster_home.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ class Main_Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: AppBarHome(),
       body: SafeArea(
         child: Column(

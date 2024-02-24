@@ -14,7 +14,7 @@ class PostHeader extends StatelessWidget {
   Widget build(BuildContext context) => SizedBox(
         height: 54,
         child: Row(
-          children: [
+          children: <Widget>[
             const SizedBox(
               width: 10,
             ),
@@ -36,9 +36,10 @@ class PostHeader extends StatelessWidget {
                     const Text(
                       "joshua_l",
                       style: TextStyle(
-                          color: Color(0xFF262626),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700),
+                        color: Color(0xFF262626),
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 3),

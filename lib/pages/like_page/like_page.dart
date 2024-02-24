@@ -16,7 +16,7 @@ class LikePage extends StatefulWidget {
 }
 
 class _LikePageState extends State<LikePage> {
-  List<ItemNotification> notifications = [
+  List<ItemNotification> notifications = <ItemNotification>[
     ItemNotification(
       images: ["assets/images/like_page/Image1.jpg"],
       names: ["karennne"],
@@ -88,35 +88,29 @@ class _LikePageState extends State<LikePage> {
     ),
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: App_Bar_Widget(
-      //   stateAppBar: _StateAppBar,
-      // ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: SizedBox(
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                App_Bar_Custom(),
-                Follow_Required(),
-                ListViewNotification(
-                  notifications: notifications,
-                ),
-                ListViewNotificationToday(
-                  notifications: notifications,
-                ),
-                ListViewNotificationWeek(notifications: notifications),
-                ListViewNotificationMonth(notifications: notifications),
-              ],
+  Widget build(BuildContext context) => Scaffold(
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  AppBarCustom(),
+                  FollowRequired(),
+                  ListViewNotification(
+                    notifications: notifications,
+                  ),
+                  ListViewNotificationToday(
+                    notifications: notifications,
+                  ),
+                  ListViewNotificationWeek(notifications: notifications),
+                  ListViewNotificationMonth(notifications: notifications),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: Bottom_Bar(),
-    );
-  }
+        bottomNavigationBar: BottomBar(),
+      );
 }

@@ -4,17 +4,13 @@ class AppBarSearchPage extends StatelessWidget implements PreferredSize {
   const AppBarSearchPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-    );
-  }
+  Widget build(BuildContext context) => const SizedBox(
+        height: 60,
+      );
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(1);
+  Size get preferredSize => const Size.fromHeight(1);
 }

@@ -12,21 +12,14 @@ class PostListView extends StatelessWidget {
   final List<Post> posts;
 
   @override
-  Widget build(BuildContext context) {
-    print(posts.length);
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        return PostItem(
+  Widget build(BuildContext context) => ListView.separated(
+        itemBuilder: (context, index) => PostItem(
           post: posts[index],
-        );
-      },
-      itemCount: posts.length,
-      separatorBuilder: (context, index) {
-        return Container(
+        ),
+        itemCount: posts.length,
+        separatorBuilder: (context, index) => Container(
           height: 16,
           color: Colors.black.withOpacity(0.1),
-        );
-      },
-    );
-  }
+        ),
+      );
 }

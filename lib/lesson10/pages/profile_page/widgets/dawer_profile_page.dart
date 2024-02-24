@@ -17,21 +17,19 @@ class DrawerProfilePage extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 2 / 3,
         height: MediaQuery.of(context).size.height,
         child: Drawer(
-          backgroundColor: Color(0xFFFFFFFF),
+          backgroundColor: const Color(0xFFFFFFFF),
           child: Column(
             children: [
               Expanded(
                 child: ListView(
-                  children: [
-                    Container(
+                  children: <Widget>[
+                    SizedBox(
                       height: 44,
                       child: DrawerHeader(
-                        margin: EdgeInsets.only(top: 0),
                         decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
                         ),
                         child: Container(
-                          margin: EdgeInsets.only(top: 0),
                           child: const Text(
                             's.khasanov_',
                             style: TextStyle(
@@ -43,38 +41,38 @@ class DrawerProfilePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Archive',
                       icons: "assets/icons/lesson8/Icon.svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Your Activity',
                       icons: "assets/icons/lesson8/Icon (1).svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Nametag',
                       icons: "assets/icons/lesson8/Icon (2).svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Saved',
                       icons: "assets/icons/lesson8/Icon (3).svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Close Friends',
                       icons: "assets/icons/lesson8/Icon (4).svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Discover People',
                       icons: "assets/icons/lesson8/Icon (5).svg",
                     ),
-                    ItemList(
+                    _itemList(
                       title: 'Open Facebook',
                       icons: "assets/icons/lesson8/Icon (6).svg",
                     ),
                   ],
                 ),
               ),
-              ItemList(
+              _itemList(
                 title: 'Settings',
                 icons: "assets/icons/lesson8/Icon (7).svg",
               ),
@@ -83,7 +81,7 @@ class DrawerProfilePage extends StatelessWidget {
         ),
       );
 
-  Widget ItemList(
+  Widget _itemList(
           {String title = "",
           String icons = "assets/icons/lesson8/Icon (6).svg"}) =>
       Container(
@@ -97,7 +95,9 @@ class DrawerProfilePage extends StatelessWidget {
             Navigator.pop(mainContext);
           },
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFFFFFFF), elevation: 0),
+            backgroundColor: const Color(0xFFFFFFFF),
+            elevation: 0,
+          ),
           child: Row(
             children: [
               SvgPicture.asset(

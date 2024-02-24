@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GirdView_Widgets extends StatefulWidget {
-  const GirdView_Widgets({Key? key}) : super(key: key);
+class GirdViewWidgets extends StatefulWidget {
+  const GirdViewWidgets({Key? key}) : super(key: key);
 
   @override
-  State<GirdView_Widgets> createState() => _GirdView_WidgetsState();
+  State<GirdViewWidgets> createState() => _GirdViewWidgetsState();
 }
 
-class _GirdView_WidgetsState extends State<GirdView_Widgets> {
+class _GirdViewWidgetsState extends State<GirdViewWidgets> {
   final List<String> _dataList = [
     "assets/images/lesson8/Rectangle.jpg",
     "assets/images/lesson8/Rectangle1.jpg",
@@ -36,25 +36,20 @@ class _GirdView_WidgetsState extends State<GirdView_Widgets> {
   ];
 
   @override
-  Widget build(BuildContext context) {
-    print(_dataList.length);
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        crossAxisSpacing: 1.0,
-        mainAxisSpacing: 1.0,
-      ),
-      itemCount: _dataList.length,
-      itemBuilder: (context, index) {
-        return GridTile(
+  Widget build(BuildContext context) => GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 1.0,
+          mainAxisSpacing: 1.0,
+        ),
+        itemCount: _dataList.length,
+        itemBuilder: (context, index) => GridTile(
           child: Image.asset(
             _dataList[index],
             width: 124,
             height: 124,
             fit: BoxFit.cover,
           ),
-        );
-      },
-    );
-  }
+        ),
+      );
 }

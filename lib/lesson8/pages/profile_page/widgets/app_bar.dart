@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AppBar_Page extends StatelessWidget implements PreferredSize {
-  const AppBar_Page({Key? key}) : super(key: key);
+class AppBarPage extends StatelessWidget implements PreferredSize {
+  const AppBarPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFFFAFAFA),
+      backgroundColor: const Color(0xFFFAFAFA),
       elevation: 0,
       centerTitle: true,
       actions: [
@@ -18,10 +18,10 @@ class AppBar_Page extends StatelessWidget implements PreferredSize {
               width: 9,
               fit: BoxFit.fitWidth,
             ),
-            SizedBox(
+            const SizedBox(
               width: 6,
             ),
-            Text(
+            const Text(
               "jacob_w",
               style: TextStyle(
                 fontSize: 16,
@@ -31,7 +31,7 @@ class AppBar_Page extends StatelessWidget implements PreferredSize {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             SvgPicture.asset(
@@ -68,10 +68,8 @@ class AppBar_Page extends StatelessWidget implements PreferredSize {
   }
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(44);
 }

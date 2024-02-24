@@ -14,71 +14,65 @@ class PostFooter extends StatelessWidget {
   final int selectedImageIndex;
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(7),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildActions(),
-          const SizedBox(height: 5),
-          _buildReactions(),
-          const SizedBox(height: 3),
-          _buildDescription(),
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.all(7),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildActions(),
+            const SizedBox(height: 5),
+            _buildReactions(),
+            const SizedBox(height: 3),
+            _buildDescription(),
+          ],
+        ),
+      );
+
+  Widget _buildActions() => Row(
+        children: <Widget>[
+          Expanded(
+            child: Row(
+              children: [
+                SvgPicture.asset(
+                  "assets/icons/lesson10/Shape.svg",
+                  width: 24,
+                  fit: BoxFit.fitWidth,
+                ),
+                const SizedBox(width: 16),
+                SvgPicture.asset(
+                  "assets/icons/lesson10/Comment.svg",
+                  width: 22,
+                  fit: BoxFit.fitWidth,
+                ),
+                const SizedBox(width: 16),
+                SvgPicture.asset(
+                  "assets/icons/lesson10/Messanger.svg",
+                  width: 23,
+                  fit: BoxFit.fitWidth,
+                ),
+              ],
+            ),
+          ),
+          _buildImageCarouselIndicator(),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SvgPicture.asset(
+                  "assets/icons/lesson10/Save.svg",
+                  width: 21,
+                  fit: BoxFit.fitWidth,
+                ),
+              ],
+            ),
+          ),
         ],
-      ),
-    );
-  }
+      );
 
-  Widget _buildActions() {
-    return Row(
-      children: [
-        Expanded(
-          child: Row(
-            children: [
-              SvgPicture.asset(
-                "assets/icons/lesson10/Shape.svg",
-                width: 24,
-                fit: BoxFit.fitWidth,
-              ),
-              const SizedBox(width: 16),
-              SvgPicture.asset(
-                "assets/icons/lesson10/Comment.svg",
-                width: 22,
-                fit: BoxFit.fitWidth,
-              ),
-              const SizedBox(width: 16),
-              SvgPicture.asset(
-                "assets/icons/lesson10/Messanger.svg",
-                width: 23,
-                fit: BoxFit.fitWidth,
-              ),
-            ],
-          ),
-        ),
-        _buildImageCarouselIndicator(),
-        Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SvgPicture.asset(
-                "assets/icons/lesson10/Save.svg",
-                width: 21,
-                fit: BoxFit.fitWidth,
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildImageCarouselIndicator() {
-    return SizedBox(
-      height: 6,
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return Container(
+  Widget _buildImageCarouselIndicator() => SizedBox(
+        height: 6,
+        child: ListView.builder(
+          itemBuilder: (context, index) => Container(
             margin: const EdgeInsets.symmetric(horizontal: 2),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -88,71 +82,65 @@ class PostFooter extends StatelessWidget {
             ),
             width: 6,
             height: 6,
-          );
-        },
-        scrollDirection: Axis.horizontal,
-        itemCount: post.images.length,
-        shrinkWrap: true,
-      ),
-    );
-  }
-
-  Widget _buildReactions() {
-    return Row(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(30),
-          child: Image.asset(
-            post.like.avatar,
-            width: 17,
-            height: 17,
           ),
+          scrollDirection: Axis.horizontal,
+          itemCount: post.images.length,
+          shrinkWrap: true,
         ),
-        const SizedBox(width: 6.5),
-        RichText(
+      );
+
+  Widget _buildReactions() => Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: Image.asset(
+              post.like.avatar,
+              width: 17,
+              height: 17,
+            ),
+          ),
+          const SizedBox(width: 6.5),
+          RichText(
+            text: TextSpan(
+              style: const TextStyle(
+                fontSize: 13,
+                color: Color(0xFF262626),
+              ),
+              children: [
+                const TextSpan(text: 'Liked by '),
+                TextSpan(
+                  text: post.like.name,
+                  style: const TextStyle(fontWeight: FontWeight.w600),
+                ),
+                const TextSpan(text: ' and '),
+                TextSpan(
+                  text: '${post.totalLike} others',
+                  style: const TextStyle(fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+
+  Widget _buildDescription() => Container(
+        width: 345,
+        child: RichText(
           text: TextSpan(
             style: const TextStyle(
               fontSize: 13,
               color: Color(0xFF262626),
             ),
             children: [
-              const TextSpan(text: 'Liked by '),
               TextSpan(
-                text: post.like.name,
+                text: post.name,
                 style: const TextStyle(fontWeight: FontWeight.w600),
               ),
-              const TextSpan(text: ' and '),
               TextSpan(
-                text: '${post.totalLike} others',
-                style: const TextStyle(fontWeight: FontWeight.w600),
+                text: post.comment,
               ),
             ],
           ),
         ),
-      ],
-    );
-  }
-
-  Widget _buildDescription() {
-    return Container(
-      width: 345,
-      child: RichText(
-        text: TextSpan(
-          style: const TextStyle(
-            fontSize: 13,
-            color: Color(0xFF262626),
-          ),
-          children: [
-            TextSpan(
-              text: post.name,
-              style: const TextStyle(fontWeight: FontWeight.w600),
-            ),
-            TextSpan(
-              text: post.comment,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+      );
 }

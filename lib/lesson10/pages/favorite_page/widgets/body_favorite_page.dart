@@ -15,7 +15,7 @@ class BodyFavoritePage extends StatefulWidget {
 }
 
 class _BodyFavoritePageState extends State<BodyFavoritePage> {
-  List<ItemNotification> notifications = [
+  List<ItemNotification> notifications = <ItemNotification>[
     ItemNotification(
       images: ["assets/images/like_page/Image1.jpg"],
       names: ["karennne"],
@@ -93,14 +93,13 @@ class _BodyFavoritePageState extends State<BodyFavoritePage> {
         // ),
         body: SafeArea(
           child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
             child: SizedBox(
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   // const App_Bar_Custom(),
-                  const Follow_Required(),
+                  const FollowRequired(),
                   ListViewNotification(
                     notifications: notifications,
                   ),

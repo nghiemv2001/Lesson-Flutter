@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Follow_Required extends StatelessWidget {
-  const Follow_Required({Key? key}) : super(key: key);
+class FollowRequired extends StatelessWidget {
+  const FollowRequired({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Container(
