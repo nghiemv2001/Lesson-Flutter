@@ -1,18 +1,16 @@
 import 'package:design_ui_instagram/lesson10/pages/favorite_page/modals/item_you.dart';
-import 'package:design_ui_instagram/lesson10/pages/favorite_page/widgets/tab_follow/tab_view_follow.dart';
-import 'package:design_ui_instagram/lesson10/pages/favorite_page/widgets/tab_you/tab_view_you.dart';
+import 'package:design_ui_instagram/pages/like_page/widgets/follow_required.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class BodyFavoritePage extends StatefulWidget {
-  const BodyFavoritePage({required this.tabController, Key? key})
-      : super(key: key);
+class TabViewYou extends StatefulWidget {
+  const TabViewYou({required this.tabController, Key? key}) : super(key: key);
   final TabController tabController;
   @override
-  State<BodyFavoritePage> createState() => _BodyFavoritePageState();
+  State<TabViewYou> createState() => _TabViewYouState();
 }
 
-class _BodyFavoritePageState extends State<BodyFavoritePage> {
+class _TabViewYouState extends State<TabViewYou> {
   final Map<String, List<ItemYou>> _dataItemYou = {
     'New': <ItemYou>[
       ItemYou(
@@ -128,17 +126,40 @@ class _BodyFavoritePageState extends State<BodyFavoritePage> {
           reply: false),
     ],
   };
-
   @override
-  Widget build(BuildContext context) => Scaffold(
-        body: TabBarView(
-          controller: widget.tabController,
-          children: [
-            TabViewFollow(),
-            TabViewYou(tabController: widget.tabController)
-          ],
-        ),
-      );
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          FollowRequired(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: ListView.builder(
+              itemCount: _dataItemYou.length,
+              itemBuilder: (BuildContext context, int index) {
+                final _key = _dataItemYou.keys.elementAt(index);
+                final _items = _dataItemYou[_key] ?? [];
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildHeader(_key),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: _items.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return _biuldItemYou(_items[index]);
+                      },
+                    ),
+                  ],
+                );
+              },
+            ),
+          )
+        ],
+      ),
+    );
+  }
 
   Widget _buildHeader(String _title) {
     return Container(

@@ -7,14 +7,6 @@ class FollowRequired extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         margin: const EdgeInsets.symmetric(vertical: 1),
         width: double.infinity,
-        decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: Color(0xFFDFDFDF),
-              width: 1,
-            ),
-          ),
-        ),
         height: 48,
         child: const Padding(
           padding: EdgeInsets.only(

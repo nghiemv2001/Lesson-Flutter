@@ -1,9 +1,9 @@
+import 'package:design_ui_instagram/lesson10/pages/favorite_page/widgets/app_bar_tab_view.dart';
 import 'package:design_ui_instagram/lesson10/pages/favorite_page/widgets/body_favorite_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'pages/create_page/body_create_page.dart';
-import 'pages/favorite_page/widgets/app_bar_tab_view.dart';
 import 'pages/main_page/widgets/app_bar.dart';
 import 'pages/main_page/widgets/body_main_page.dart';
 import 'pages/profile_page/widgets/app_bar.dart';
@@ -19,8 +19,31 @@ class InstagramPages extends StatefulWidget {
   State<InstagramPages> createState() => _InstagramPagesState();
 }
 
-class _InstagramPagesState extends State<InstagramPages> {
+class _InstagramPagesState extends State<InstagramPages>
+    with SingleTickerProviderStateMixin {
   var _selectedTab = 0;
+  late TabController _tabController;
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  void _handleTabSelection() {
+    if (!_tabController.indexIsChanging) {
+      setState(() {
+        _selectedTab = _tabController.index;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: _buildAppBar(),
@@ -30,37 +53,41 @@ class _InstagramPagesState extends State<InstagramPages> {
             _selectedTab == 4 ? DrawerProfilePage(mainContext: context) : null,
       );
 
-  PreferredSize _buildAppBar() {
+  PreferredSizeWidget _buildAppBar() {
     switch (_selectedTab) {
       case 0:
-        return const AppBarMainPage();
+        return AppBarMainPage();
       case 1:
-        return const AppBarSearchPage();
+        return AppBarSearchPage();
       case 2:
-        return const AppBarSearchPage();
+        return AppBarSearchPage();
       case 3:
-        return const AppBarTabView();
+        return AppBarTabView(
+          tabController: _tabController,
+        );
       case 4:
-        return const AppBarProfilePage();
+        return AppBarProfilePage();
       default:
-        return const AppBarProfilePage();
+        return AppBarProfilePage();
     }
   }
 
   Widget _buildBody() {
     switch (_selectedTab) {
       case 0:
-        return const BodyMainPage();
+        return BodyMainPage();
       case 1:
-        return const BodySearchPage();
+        return BodySearchPage();
       case 2:
-        return const BodyCreatePage();
+        return MyHomePage();
       case 3:
-        return const BodyFavoritePage();
+        return BodyFavoritePage(
+          tabController: _tabController,
+        );
       case 4:
-        return const BodyProfilePage();
+        return BodyProfilePage();
       default:
-        return const SizedBox();
+        return SizedBox();
     }
   }
 

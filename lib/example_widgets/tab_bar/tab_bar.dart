@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Tab_Bar extends StatefulWidget {
-  const Tab_Bar({Key? key}) : super(key: key);
+class TabBarWidget extends StatefulWidget {
+  const TabBarWidget({Key? key}) : super(key: key);
 
   @override
-  State<Tab_Bar> createState() => _Tab_BarState();
+  State<TabBar> createState() => _TabBarState();
 }
 
-class _Tab_BarState extends State<Tab_Bar> {
+class _TabBarState extends State<TabBar> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -19,9 +19,10 @@ class _Tab_BarState extends State<Tab_Bar> {
             indicatorWeight: 5,
             isScrollable: true,
             indicator: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                color: Colors.amber,
-                border: Border.all(width: 1)),
+              borderRadius: BorderRadius.circular(40),
+              color: Colors.amber,
+              border: Border.all(width: 1),
+            ),
             tabs: [
               Tab(icon: Icon(Icons.call)),
               Tab(icon: Icon(Icons.camera)),

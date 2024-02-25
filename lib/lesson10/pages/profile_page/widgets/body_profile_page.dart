@@ -62,7 +62,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "assets/images/lesson8/Oval.jpg",
+                              'assets/images/lesson8/Oval.jpg',
                               width: 86,
                               height: 86,
                               fit: BoxFit.cover,
@@ -79,14 +79,14 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           Column(
                             children: [
                               Text(
-                                "54",
+                                '54',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color(0xFF262626)),
                               ),
                               Text(
-                                "Posts",
+                                'Posts',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -97,14 +97,14 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           Column(
                             children: [
                               Text(
-                                "834",
+                                '834',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color(0xFF262626)),
                               ),
                               Text(
-                                "Followers",
+                                'Followers',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -115,14 +115,14 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           Column(
                             children: [
                               Text(
-                                "162",
+                                '162',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color(0xFF262626)),
                               ),
                               Text(
-                                "Following",
+                                'Following',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -144,7 +144,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       const Text(
-                        "Jacob West",
+                        'Jacob West',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
@@ -174,7 +174,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                         ),
                       ),
                       const Text(
-                        "Everything is designed.",
+                        'Everything is designed.',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
@@ -200,7 +200,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                     onPressed: () {},
                     child: const Center(
                       child: Text(
-                        "Edit Profile",
+                        'Edit Profile',
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -234,7 +234,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: SvgPicture.asset(
-                                  "assets/icons/lesson8/Add Story.svg",
+                                  'assets/icons/lesson8/Add Story.svg',
                                   width: 18,
                                   height: 18,
                                   fit: BoxFit.cover,
@@ -245,7 +245,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           const SizedBox(
                             height: 3,
                           ),
-                          const Text("New"),
+                          const Text('New'),
                         ],
                       ),
                       Column(
@@ -275,7 +275,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
                                   child: Image.asset(
-                                    "assets/images/lesson8/Oval1.jpg",
+                                    'assets/images/lesson8/Oval1.jpg',
                                     width: 56,
                                     height: 56,
                                     fit: BoxFit.cover,
@@ -287,7 +287,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           const SizedBox(
                             height: 3,
                           ),
-                          const Text("Friends"),
+                          const Text('Friends'),
                         ],
                       ),
                       Column(
@@ -317,7 +317,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
                                   child: Image.asset(
-                                    "assets/images/lesson8/Oval2.jpg",
+                                    'assets/images/lesson8/Oval2.jpg',
                                     width: 56,
                                     height: 56,
                                     fit: BoxFit.cover,
@@ -329,7 +329,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           const SizedBox(
                             height: 3,
                           ),
-                          const Text("Sport"),
+                          const Text('Sport'),
                         ],
                       ),
                       Column(
@@ -371,7 +371,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                           const SizedBox(
                             height: 3,
                           ),
-                          const Text("Design"),
+                          const Text('Design'),
                         ],
                       )
                     ],
@@ -383,7 +383,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                   length: 2,
                   child: SingleChildScrollView(
                     child: Column(
-                      children: [
+                      children: <Widget>[
                         Container(
                           margin: const EdgeInsets.only(top: 15),
                           width: MediaQuery.of(context).size.width,
@@ -406,12 +406,12 @@ class _BodyProfilePageState extends State<BodyProfilePage>
                             tabs: [
                               Tab(
                                 icon: SvgPicture.asset(
-                                  "assets/icons/lesson8/Grid Icon.svg",
+                                  'assets/icons/lesson8/Grid Icon.svg',
                                 ),
                               ),
                               Tab(
                                 icon: SvgPicture.asset(
-                                  "assets/icons/lesson8/Tags Icon.svg",
+                                  'assets/icons/lesson8/Tags Icon.svg',
                                 ),
                               ),
                             ],

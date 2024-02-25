@@ -23,6 +23,5 @@ class Main_Page extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
