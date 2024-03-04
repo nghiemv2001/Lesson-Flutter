@@ -90,10 +90,7 @@ flutter:
     - assets/icons/live/
     - assets/images/my_live/
     - assets/icons/my_live/
-    - assets/images/picture_short/
-    - assets/icons/picture_short/
-    - assets/images/add_image/
-    - assets/icons/add_image/
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -9,18 +9,18 @@ class TabViewFollow extends StatefulWidget {
 }
 
 class _TabViewFollowState extends State<TabViewFollow> {
-  List<ItemFollow> _datafollow = [
+  final List<ItemFollow> _datafollow = [
     ItemFollow(
-        avatars: ["assets/images/like_page/Image1.jpg"],
+        avatars: ['assets/images/like_page/Image1.jpg'],
         names: ["karennne"],
         content: "karennne liked 3 posts.",
         status: 0,
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg"
+          "assets/images/like_page/Rectangle.png",
+          "assets/images/like_page/Rectangle (1).png",
+          "assets/images/like_page/Rectangle (2).png",
         ]),
     ItemFollow(
         avatars: [
@@ -37,7 +37,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (3).png",
         ]),
     ItemFollow(
         avatars: [
@@ -52,11 +52,11 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (4).png",
         ]),
     ItemFollow(
         avatars: [
-          "assets/images/like_page/Image2.jpg",
+          "assets/images/like_page/Image3.jpg",
         ],
         names: [
           "craig_love",
@@ -66,14 +66,14 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (5).png",
+          "assets/images/like_page/Rectangle (6).png",
+          "assets/images/like_page/Rectangle (7).png",
+          "assets/images/like_page/Rectangle (8).png",
+          "assets/images/like_page/Rectangle (9).png",
+          "assets/images/like_page/Rectangle (10).png",
+          "assets/images/like_page/Rectangle (11).png",
+          "assets/images/like_page/Rectangle (12).png",
         ]),
     ItemFollow(
         avatars: [
@@ -90,7 +90,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (13).png",
         ]),
     ItemFollow(
         avatars: [
@@ -106,7 +106,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (14).png",
         ]),
     ItemFollow(
         avatars: [
@@ -123,7 +123,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: true,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
+          "assets/images/like_page/Rectangle (15).png",
         ]),
     ItemFollow(
         avatars: ["assets/images/like_page/Image1.jpg"],
@@ -133,9 +133,9 @@ class _TabViewFollowState extends State<TabViewFollow> {
         isSpecial: false,
         time: "3h",
         images: [
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg",
-          "assets/images/like_page/Rectangle.jpg"
+          "assets/images/like_page/Rectangle (16).png",
+          "assets/images/like_page/Rectangle (17).png",
+          "assets/images/like_page/Rectangle (18).png",
         ]),
   ];
   @override
@@ -150,25 +150,37 @@ class _TabViewFollowState extends State<TabViewFollow> {
   }
 
   Widget _buildItemListView(ItemFollow _itemFollow) {
-    return Row(
-      children: [
-        _buildAvatars(_itemFollow.avatars, _itemFollow.status),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildContent(_itemFollow.content, _itemFollow.status),
-            (_itemFollow.images != null && _itemFollow.images!.length > 1)
-                ? _buildImages(_itemFollow.images!)
-                : Container(),
-          ],
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _buildAvatars(_itemFollow.avatars, _itemFollow.status),
+              _buildContent(_itemFollow.content, _itemFollow.status),
+            ],
+          ),
+          (_itemFollow.status == 0) ? Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 44, width: 44,),
+              SizedBox(width: 12,),
+              (_itemFollow.images != null && _itemFollow.images!.length > 1)
+                  ? _buildImages(_itemFollow.images!)
+                  : Container(),
+            ],
+          ) : Container(),
+        ],
+      ),
     );
   }
 
   Widget _buildAvatars(List<String> _avatars, int _status) {
-    if (_avatars.length == 1)
+    if (_avatars.length == 1) {
       return Container(
+        margin: EdgeInsets.only(right: 12),
         height: 44,
         width: 44,
         decoration: const BoxDecoration(
@@ -178,14 +190,14 @@ class _TabViewFollowState extends State<TabViewFollow> {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: Image.asset(
-            "${_avatars![0]}",
+            _avatars[0],
             width: 44,
             height: 44,
             fit: BoxFit.fitWidth,
           ),
         ),
       );
-    else
+    } else {
       return Container(
         height: 44,
         width: 44,
@@ -211,7 +223,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Image.asset(
-                    "${_avatars?[1]}",
+                    _avatars[1],
                     width: 32,
                     height: 32,
                     fit: BoxFit.cover,
@@ -236,7 +248,7 @@ class _TabViewFollowState extends State<TabViewFollow> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Image.asset(
-                    "${_avatars![0]}",
+                    _avatars[0],
                     width: 32,
                     height: 32,
                     fit: BoxFit.cover,
@@ -247,25 +259,24 @@ class _TabViewFollowState extends State<TabViewFollow> {
           ],
         ),
       );
+    }
   }
 
   Widget _buildContent(String _content, int _status) {
     return Container(
       width: 230,
       height: 16,
-      color: Colors.blue,
+      child: Text(_content, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400,),),
     );
   }
 
   Widget _buildImages(List<String> _images) {
     return Container(
-      margin: EdgeInsets.only(top: 16),
-      width: 200,
-      height: 44,
-      color: Colors.red,
+      width: 284,
+      height: (_images.length <=6 )? 44 : 92,
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: (_images.length < 8) ? _images.length : 8,
+         crossAxisCount: 6,
           crossAxisSpacing: 1.0,
           mainAxisSpacing: 1.0,
         ),

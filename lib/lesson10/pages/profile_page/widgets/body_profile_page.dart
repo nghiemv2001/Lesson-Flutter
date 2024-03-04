@@ -214,7 +214,7 @@ class _BodyProfilePageState extends State<BodyProfilePage>
               Padding(
                 padding: const EdgeInsets.only(top: 12, left: 14, right: 51),
                 child: SizedBox(
-                  height: 83,
+                  height: 87,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
