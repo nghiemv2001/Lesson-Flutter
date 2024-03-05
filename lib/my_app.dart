@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'lesson10/instagram_pages.dart';
+import 'todo_list/todo_list.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -8,6 +8,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: InstagramPages(),
+        home: ToDoList(),
       );
 }
